@@ -3,7 +3,7 @@ extends Node2D
 export (PackedScene) var Mob
 
 export var mobSpawnRate = 1.0
-var MOB_SCENE = load("res://Scenes/mob.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -39,4 +39,6 @@ func _on_MobRateSpawner_timeout():
 	
 	
 func game_over():
+	$TimeLimit.stop()
 	$MobRateSpawner.stop()
+	

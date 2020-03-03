@@ -1,3 +1,126 @@
-[gd_scene format=2]
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/hud.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 1 )
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="TimeLimit" type="Label" parent="."]
+anchor_left = 0.486412
+anchor_top = 0.0798859
+anchor_right = 0.526412
+anchor_bottom = 0.101886
+margin_left = 0.47998
+margin_top = -6.8
+margin_right = -0.480042
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTitle" type="Label" parent="."]
+anchor_left = 0.415741
+anchor_top = 0.179905
+anchor_right = 0.611163
+anchor_bottom = 0.309905
+margin_left = -0.456024
+margin_top = -7.62939e-06
+margin_right = 0.431946
+margin_bottom = -1.52588e-05
+custom_fonts/font = SubResource( 2 )
+text = "IDK"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageTimer" type="Timer" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NormalMode" type="Button" parent="."]
+anchor_left = 0.41298
+anchor_top = 0.57541
+anchor_right = 0.600924
+anchor_bottom = 0.636973
+margin_left = -0.117035
+margin_top = -0.199829
+margin_right = 0.42804
+margin_bottom = -0.137756
+custom_fonts/font = SubResource( 3 )
+text = "Normal Mode"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ResearcherMode" type="Button" parent="."]
+anchor_left = 0.40143
+anchor_top = 0.676943
+anchor_right = 0.621473
+anchor_bottom = 0.738097
+margin_left = 0.159241
+margin_top = -0.0628052
+margin_right = -0.164368
+margin_bottom = 0.244843
+custom_fonts/font = SubResource( 4 )
+text = "Research Mode"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="EndlessMode" type="Button" parent="."]
+anchor_left = 0.405861
+anchor_top = 0.763366
+anchor_right = 0.604846
+anchor_bottom = 0.825278
+margin_top = 3.05176e-05
+margin_right = 0.239044
+margin_bottom = -0.14743
+custom_fonts/font = SubResource( 5 )
+text = "Endless Mode"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Multiplayer" type="Button" parent="."]
+anchor_left = 0.419039
+anchor_top = 0.858762
+anchor_right = 0.579039
+anchor_bottom = 0.919762
+margin_left = -0.416016
+margin_top = -0.200012
+margin_right = -0.256042
+margin_bottom = 0.200012
+custom_fonts/font = SubResource( 6 )
+text = "Multiplayer"
+__meta__ = {
+"_edit_use_anchors_": true
+}
